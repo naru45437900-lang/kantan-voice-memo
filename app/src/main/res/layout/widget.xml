@@ -1,0 +1,6 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="12dp" android:background="@drawable/panel">
+ <TextView android:id="@+id/widgetSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="未完了 0件" android:textStyle="bold" android:textSize="17sp" android:textColor="#18332B"/>
+ <TextView android:id="@+id/widgetNext" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="次の通知" android:textSize="14sp" android:textColor="#38564D"/>
+ <TextView android:id="@+id/widgetMemos" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:maxLines="3" android:text="今日のメモはありません" android:textSize="14sp" android:textColor="#18332B"/>
+ <Button android:id="@+id/widgetRecord" android:layout_width="match_parent" android:layout_height="48dp" android:text="🎙 録音" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/record_button"/>
+</LinearLayout>
