@@ -18,5 +18,5 @@ public final class MemoStore {
   public static String today(){return new SimpleDateFormat("yyyy-MM-dd",Locale.JAPAN).format(new Date());}
   public static List<String> times(Context c){String raw=c.getSharedPreferences(PREF,0).getString(TIMES,"09:00,12:00,15:00");if(raw.isEmpty())return new ArrayList<>();return new ArrayList<>(Arrays.asList(raw.split(",")));}
   public static void saveTimes(Context c,List<String> ts){Collections.sort(ts);c.getSharedPreferences(PREF,0).edit().putString(TIMES,String.join(",",ts)).apply(); ReminderScheduler.scheduleAll(c);MemoWidget.refresh(c);}
-  public static int pendingToday(Context c){int n=0;for(Memo m:memos(c))if(m.day.equals(today())&&!m.done)n++;return n;}
+  public static int pendingCount(Context c){int n=0;for(Memo m:memos(c))if(!m.done)n++;return n;}
 }
